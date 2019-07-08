@@ -1,9 +1,15 @@
 import React from 'react';
+import {Route, Switch, withRouter, Redirect} from 'react-router-dom';
+import Layout from './containers/Layout.js'
 
 
-function App() {
+
+
+const App = () => {
   return (
-    <div></div>
+    <Layout>
+        
+    </Layout>
   );
 }
 
