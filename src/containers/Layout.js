@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 //import { connect } from 'react-redux';
 import SideDrawer from '../components/Navigation/SideDrawer';
+import DrawerButton from '../components/Navigation/DrawerButton';
 import { ReactComponent as HamburgerIcon } from '../assets/icons/hamburger.svg';
 
 
@@ -29,7 +30,7 @@ const Layout = () =>  {
     
         return(
             <>  
-                {!showDrawer && <HamburgerIcon onClick={drawerOpenedHandler} />}
+                {!showDrawer && <DrawerButton clicked={drawerOpenedHandler} />}
                 {showDrawer &&<SideDrawer 
                 closeFunction={drawerClosedHandler}
                 open={showDrawer}/>}

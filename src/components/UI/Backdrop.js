@@ -9,6 +9,9 @@ const BackdropStyled = styled.div`
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    @media (min-width: 787px) {
+        display: none;
+    }
 `;
 
 const Backdrop = (props) => (
