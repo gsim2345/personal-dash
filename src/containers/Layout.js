@@ -9,7 +9,11 @@ const Layout = () =>  {
 
     const [showDrawer, setShowDrawer] = useState(false);
     
-    const drawerCloseHandler = (props) => {
+    const drawerClosedHandler = (props) => {
+        setShowDrawer(false);
+    }
+
+    const drawerOpenedHandler = (props) => {
         setShowDrawer(true);
     }
     
@@ -25,9 +29,9 @@ const Layout = () =>  {
     
         return(
             <>  
-                {!showDrawer && <HamburgerIcon onClick={drawerCloseHandler} />}
+                {!showDrawer && <HamburgerIcon onClick={drawerOpenedHandler} />}
                 {showDrawer &&<SideDrawer 
-                closed={drawerCloseHandler}
+                closeFunction={drawerClosedHandler}
                 open={showDrawer}/>}
                 
             </>
